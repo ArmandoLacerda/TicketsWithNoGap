@@ -1,6 +1,6 @@
 -- look for gaps
 select * from (
-	select top 10 branchId, ticketNumber, ticketNumber - (lag(ticketNumber, 1, 1) over (order by branchid, ticketNumber)) as [GAP]
+	select top 100000000 branchId, ticketNumber, ticketNumber - (lag(ticketNumber, 1, 1) over (order by branchid, ticketNumber)) as [GAP]
 	from dbo.TicketEntry
 	order by branchId, ticketNumber 
 ) [t]
