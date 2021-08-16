@@ -39,7 +39,7 @@ namespace AsyncContinue
 
         static async Task RunTickets(int i)
         {
-            var cnn = new SqlConnection("Server=tcp:ticketingcase.database.windows.net,1433;Initial Catalog=ticketingCase;Persist Security Info=False;User ID=mvp_dl;Password=W1r77TT98%ab@#;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+            var cnn = new SqlConnection("Server=tcp:<server>.database.windows.net,1433;Initial Catalog=<db_name>;Persist Security Info=False;User ID=<acct>;Password=<pwd>;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
             var cmd = new SqlCommand(@"
 declare @loop int = 0;
 declare @rollback int;
